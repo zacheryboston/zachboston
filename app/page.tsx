@@ -2,64 +2,135 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="text-white animate-fade-up">
+      {/* HERO SECTION */}
+<section
+  id="home"
+  className="relative min-h-[90vh] bg-fixed bg-framed"
+  style={{ backgroundImage: "url(/images/livingroom.png)" }}
+>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-8 pt-48">
+          <div className="max-w-xl space-y-6">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/portrait.jpg"
+              alt="Zach Boston"
+              width={240}
+              height={240}
+              className="rounded-full ring-2 ring-white/20 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
+              priority
             />
-            Deploy Now
-          </a>
+
+            <h1 className="text-4xl md:text-5xl font-light leading-tight">
+              Hi, I&apos;m Zach.
+              <span className="block font-normal whitespace-nowrap">
+                Software Engineer & Web Designer.
+              </span>
+            </h1>
+
+            <p className="text-lg text-white/80 max-w-md">
+              I build sleek, high-performing websites that bring ideas to life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO SECTION */}
+<section
+  id="portfolio"
+  className="relative min-h-[75vh] bg-fixed bg-framed animate-fade-up [animation-delay:200ms]"
+  style={{ backgroundImage: "url(/images/canvas.png)" }}
+>
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-8 py-44 text-center">
+          <span className="text-sm tracking-widest text-emerald-400 uppercase">
+            Portfolio
+          </span>
+
+          <h2 className="text-4xl font-light mt-4 mb-14">
+            Client Showcases
+          </h2>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.kennymeyer.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block"
           >
-            Documentation
+            <img
+              src="/images/homepage.png"
+              alt="Kenny Meyer Website"
+              className="
+                mx-auto
+                max-w-sm
+                rounded-lg
+                shadow-[0_0_35px_rgba(255,255,255,0.35)]
+                transition
+                duration-300
+                hover:scale-105
+              "
+            />
           </a>
         </div>
-      </main>
+      </section>
+
+{/* CONTACT SECTION */}
+<section
+  id="contact"
+  className="relative bg-white text-black scroll-mt-16"
+>
+  <div className="max-w-6xl mx-auto px-8 py-40">
+    <div className="max-w-xl space-y-6">
+      <span className="text-sm tracking-widest uppercase text-gray-500">
+        Contact
+      </span>
+
+      <h2 className="text-4xl font-light">
+        Let&apos;s bring your ideas to life!
+      </h2>
+
+      <p className="text-gray-700 leading-relaxed">
+        Have a project in mind or want to collaborate? I&apos;m always open to
+        discussing new ideas, creative work, or opportunities to build something
+        great.
+      </p>
+
+      <a
+        href="mailto:zacheryboston@gmail.com"
+        className="inline-block mt-6 border border-black px-6 py-3 text-sm tracking-wide uppercase hover:bg-black hover:text-white transition"
+      >
+        Contact Me
+      </a>
     </div>
+  </div>
+</section>
+
+      {/* ABOUT SECTION */}
+<section
+  id="about"
+  className="relative min-h-[90vh] bg-fixed bg-framed animate-fade-up [animation-delay:400ms]"
+  style={{ backgroundImage: "url(/images/livingroom.png)" }}
+>
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-8 py-44">
+          <div className="max-w-xl space-y-6">
+            <h2 className="text-4xl font-light">
+              I&apos;m Zach.
+            </h2>
+
+            <p className="text-white/80 leading-relaxed">
+              A software engineer and web designer with three years of experience,
+              passionate about building clean, modern, and user-friendly digital
+              experiences. In my free time, I enjoy designing for fun and
+              competing in triathlons.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
