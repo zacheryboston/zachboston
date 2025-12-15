@@ -89,7 +89,7 @@ export default function Home() {
       </span>
 
       <h2 className="text-4xl font-light">
-        Let&apos;s bring your ideas to life!
+        Let&apos;s Bring Your Ideas to Life!
       </h2>
 
       <p className="text-gray-700 leading-relaxed">
