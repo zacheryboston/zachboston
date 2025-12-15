@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main className="text-white animate-fade-up">
-      {/* HERO SECTION */}
+{/* HERO SECTION */}
 <section
   id="home"
   className="relative min-h-[100svh] bg-scroll md:bg-fixed bg-center bg-cover"
@@ -11,12 +11,16 @@ export default function Home() {
   {/* Dark overlay */}
   <div className="absolute inset-0 bg-black/60" />
 
-  <div className="relative z-10 mx-auto max-w-6xl
-    px-4 sm:px-6 md:px-8
-    pt-28 sm:pt-32 md:pt-48
-    text-white"
+  <div
+    className="
+      relative z-10
+      mx-auto max-w-6xl
+      px-4 sm:px-6 md:px-8
+      pt-32 md:pt-48
+      text-white
+    "
   >
-    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
+    <div className="flex flex-col items-start text-left gap-6 max-w-xl animate-fade-up">
 
       {/* Portrait */}
       <img
@@ -26,26 +30,26 @@ export default function Home() {
           w-40 h-40
           sm:w-44 sm:h-44
           md:w-56 md:h-56
-          rounded-full object-cover
+          rounded-full
+          object-cover
           shadow-lg
         "
       />
 
       {/* Text */}
-<div className="space-y-4 text-white">
-  <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light">
-    Hi, I’m Zach.
-  </p>
+      <div className="space-y-3">
+        <p className="text-4xl font-light">
+          Hi, I’m Zach.
+        </p>
 
-  <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light leading-tight">
-    <span className="block lg:inline">Software Engineer</span>
-    <span className="block lg:inline lg:ml-2">& Web Designer</span>
-  </p>
+        <p className="text-4xl font-light leading-tight">
+          Software Engineer & Web Designer
+        </p>
 
-  <p className="mt-4 max-w-lg text-base sm:text-lg lg:text-xl opacity-80">
-    I build sleek, high-performing websites that bring ideas to life.
-  </p>
-</div>
+        <p className="text-white/80 leading-relaxed">
+          I build sleek, high-performing websites that bring ideas to life.
+        </p>
+      </div>
 
     </div>
   </div>
